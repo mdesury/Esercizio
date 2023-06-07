@@ -1,15 +1,10 @@
 // Import stylesheets
 import './style.css';
 
-let a = 25;
-let b = 27;
+let titolo = "Percy Jackson";
+let autore = "Rick Riordan";
+let stringa = "riordan";
 
-if (a == b) {
-  document.getElementById("demo").innerHTML = "Sono gemelli";
-} else if (a > b) {
-  document.getElementById("demo").innerHTML += "Remo è il fratello più grande";
-} else if (a < b) {
-  document.getElementById("demo").innerHTML += "Nino è il fratello più grande";
-}
-
+let risultato = (titolo.toLowerCase() + autore.toLowerCase()).includes(stringa);
+console.log(risultato)
 
