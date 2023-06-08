@@ -2,18 +2,19 @@
 import './style.css';
 
 const libri = [
-  { autore: "Mario Rossi", titolo: "Il grande Gatsby" },
-  { autore: "Giulia Verdi", titolo: "Il signore degli anelli" },
-  { autore: "Mario Rossi", titolo: "Harry Potter e la pietra filosofale" }
+  { autore: "Rick Riordan", titolo: "Percy Jackson" },
+  { autore: "JR Tolkien", titolo: "Il signore degli anelli" },
+  { autore: "JK Rowling", titolo: "Harry Potter e la pietra filosofale" }
 ];
 
-const sequenzaCaratteri = "grande";
+const stringa = "Tolkien";
 
 libri.forEach(function(libro) {
-  if (libro.titolo.toLowerCase().includes(sequenzaCaratteri)) {
+  if (libro.titolo.toLowerCase().includes(stringa)) {
   console.log("Il titolo del libro è", libro.titolo, "scritto da", libro.autore);
   }
 });
+
 
 
 
