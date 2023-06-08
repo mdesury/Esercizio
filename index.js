@@ -10,7 +10,7 @@ const libri = [
 const stringa = "Tolkien";
 
 libri.forEach(function(libro) {
-  if (libro.titolo.toLowerCase().includes(stringa)) {
+  if (libro.titolo.toLowerCase().includes(stringa.toLowerCase())) {
   console.log("Il titolo del libro è", libro.titolo, "scritto da", libro.autore);
   }
 });
