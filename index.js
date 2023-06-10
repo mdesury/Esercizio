@@ -1,11 +1,14 @@
 // Import stylesheets
 import './style.css';
 
-const archivio = [
-  {titolo: "Harry Potter", autore: "JK Rowling"},
-  {titolo: "Percy Jackson", autore: "Rick Riordan"},
-  {titolo: "Il Signore degli Anelli", autore: "JK Tolkien"}]
-
+class archivio = {
+  constructor(libri) {
+    this.libri = libri;
+  }
+  
+cercaLibri(stringa) {
+  
+}
 const stringa = "percy";
 let corrispondenze = 0;
 let autore = ""
