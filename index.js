@@ -1,31 +1,34 @@
 // Import stylesheets
 import './style.css';
 
-class archivio = {
+class Archivio {
   constructor(libri) {
     this.libri = libri;
   }
-  
-cercaLibri(stringa) {
-  
-}
-const stringa = "percy";
-let corrispondenze = 0;
-let autore = ""
 
-archivio.forEach(function(libro) {
-if (libro.titolo.toLowerCase().includes(stringa)) {
-  corrispondenze ++;
-  autore = libro.autore;
-  console.log("Numero di corrispondenze: ", corrispondenze)
-}
-})
+  cercaLibri(stringa) {
+    const libriCorrispondenti = [];
 
-if (corrispondenze === 1) {
-  console.log("Il libro è stato scritto da ", autore)
-} else {
-  console.log("non sono state trovate corrispondenze")
+    this.libri.forEach(function(libro) {
+      if (libro.titolo.toLowerCase().includes(stringa.toLowerCase())) {
+        libriCorrispondenti.push(libro);
+      }
+    });
+
+    return libriCorrispondenti;
+  }
 }
+
+
+
+const archivio = new Archivio([
+  {titolo: "Harry Potter", autore: "JK Rowling", posizione: "N9", prestato: ""},
+  {titolo: "Percy Jackson Signore", autore: "Rick Riordan",  posizione: "S17", prestato: ""},
+  {titolo: "Il Signore degli Anelli", autore: "JK Tolkien",  posizione: "G7", prestato: ""}
+]);
+
+const risultatoRicerca = archivio.cercaLibri("pe");
+document.getElementById("demo").innerHTML = JSON.stringify(risultatoRicerca);
 
 
 
